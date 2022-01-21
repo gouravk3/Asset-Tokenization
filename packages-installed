@@ -1,0 +1,3 @@
+# npm install -g truffle@5.1.15
+# truffle unbox react
+# npm install @openzeppelin/contracts@v3.0.0

@@ -2,3 +2,4 @@
 # truffle unbox react
 # npm install --save @openzeppelin/contracts@v3.0.0
 # npm install --save chai chai-bn chai-as-promised
+# npm install --save dotenv

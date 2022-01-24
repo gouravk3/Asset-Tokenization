@@ -22,7 +22,7 @@ contract("TokenSale Test", async (accounts) => {
         let instance = await Token.deployed();
         let balanceOfTokenSaleSmartContract = await instance.balanceOf(TokenSale.address);
         let totalSupply = await instance.totalSupply();
-        expect(balanceOfTokenSaleSmartContract).to.be.a.bignumber.equal(totalSupply);
+        return expect(balanceOfTokenSaleSmartContract).to.be.a.bignumber.equal(totalSupply);
     });
 
     it("should be possible to buy tokens", async () => {
@@ -32,6 +32,7 @@ contract("TokenSale Test", async (accounts) => {
         let balanceBefore = await tokenInstance.balanceOf(deployerAccount);
         await kycInstance.setKycCompleted(deployerAccount, { from: deployerAccount });
         expect(tokenSaleInstance.sendTransaction({ from: deployerAccount, value: web3.utils.toWei("1", "wei")})).to.be.fulfilled;
-        return expect(tokenInstance.balanceOf(deployerAccount)).to.eventually.be.a.bignumber.equal(balanceBefore.add(new BN(1)));
+        balanceBefore = balanceBefore.add(new BN(1));
+        return expect(tokenInstance.balanceOf(deployerAccount)).to.eventually.be.a.bignumber.equal(balanceBefore);
     });
 });

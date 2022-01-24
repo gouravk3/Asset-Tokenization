@@ -1562,6 +1562,44 @@
     "version": "0.6.2+commit.bacdbe57.Emscripten.clang"
   },
   "networks": {
+    "1337": {
+      "events": {
+        "0x6faf93231a456e552dbc9961f58d9713ee4f2e69d15f1975b050ef0911053a7b": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "purchaser",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "beneficiary",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "value",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "TokensPurchased",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0xdf60e1FD5AA1d5BC74f99b19A631E2b7F6e1BD56",
+      "transactionHash": "0xa9207fbbd596ec8d2655c39bf3c22750807d461b1cce92bdc9f974f5e9475881"
+    },
     "5777": {
       "events": {
         "0x6faf93231a456e552dbc9961f58d9713ee4f2e69d15f1975b050ef0911053a7b": {
@@ -1597,12 +1635,12 @@
         }
       },
       "links": {},
-      "address": "0xA44D73a811260454d53D40cE42bABC1bC26e7011",
-      "transactionHash": "0xb0923630c4c96cc37abaadc7e2b06e9af2612ff97408eb07e043ca8efd95070a"
+      "address": "0xBA5A74F4E906044353F3310a82b8c10e43C28F46",
+      "transactionHash": "0x34043d0e6f5872b01a7b4251ddd8f091f5b94dc5aeebb8145886927da70eb598"
     }
   },
   "schemaVersion": "3.0.23",
-  "updatedAt": "2022-01-23T17:57:38.656Z",
+  "updatedAt": "2022-01-24T09:14:31.886Z",
   "networkType": "ethereum",
   "devdoc": {
     "methods": {

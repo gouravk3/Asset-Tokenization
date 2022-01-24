@@ -47,7 +47,7 @@ class App extends Component {
     }
   };
 
-   handleInoutChange = (event) => {
+   handleInputChange = (event) => {
      const target = event.target;
      const value = target.type === "checkbox" ? target.checked : target.value;
      const name = target.name;
@@ -58,7 +58,7 @@ class App extends Component {
 
    handleKycWhitelisting = async () => {
     await this.kycInstance.methods.setKycCompleted(this.state.kycAddress).send({from: this.accounts[0]});
-    alert("KYC for " +this.state.kycAddress+" is completed.");
+    alert("KYC for "+this.state.kycAddress+" is completed.");
    }
 
   render() {
@@ -70,7 +70,7 @@ class App extends Component {
         <h1>StarDucks Cappucino Token Sale</h1>
         <p>Get your token today!</p>
         <h2>Kyc Whitelisitng</h2>
-        Address to allow: <input type="text" name="kycAddress" value={this.state.kycAddress} onChange={this.handleInoutChange}/>
+        Address to allow: <input type="text" name="kycAddress" value={this.state.kycAddress} onChange={this.handleInputChange}/>
         <button type="button" onClick={this.handleKycWhitelisting}>Add to Whitelist</button>
       </div>
     );

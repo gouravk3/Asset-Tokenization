@@ -3,3 +3,8 @@
 # npm install --save @openzeppelin/contracts@v3.0.0
 # npm install --save chai chai-bn chai-as-promised
 # npm install --save dotenv
+# npm install --save @truffle/hdwallet-provider
+
+
+truffle console
+web3.eth.sendTransaction({to:"0x8A0313B0030957C9F132AEB044863A89CdF7fc0a",from:accounts[0], value:web3.utils.toWei("2", "ether")});
